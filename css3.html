@@ -5,6 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>CSS3</title>
     <style>
+      body {
+        background: linear-gradient(
+          90deg,
+          rgba(131, 58, 180, 1) 0%,
+          rgba(253, 29, 29, 1) 50%,
+          rgba(252, 176, 69, 1) 100%
+        );
+      }
       .radius {
         background: green;
         height: 40px;
@@ -40,20 +48,51 @@
 
       .fondo {
         width: 100%;
-        height: 200px;
-        /* background-image: url("https://www.w3schools.com/css/img_flwr.gif"),
+        height: 100px;
+        background-image: url("https://www.w3schools.com/css/img_flwr.gif"),
           url("https://www.w3schools.com/css/paper.gif");
         background-position: right bottom, left top;
         background-repeat: no-repeat, repeat;
-        padding: 15px; */
+        padding: 15px;
+      }
 
-        background: black url("https://www.w3schools.com/css/img_flwr.gif")
-          url("https://www.w3schools.com/css/paper.gif");
+      .degradados {
+        width: 200px;
+        height: 200px;
+        /* background: linear-gradient(
+            to right,
+            rgba(255, 255, 255, 0),
+            rgba(255, 255, 255, 1)
+          ),
+          url("https://www.w3schools.com/css/img_flwr.gif"); */
+        background: radial-gradient(red, yellow, rgb(30, 144, 255));
+        transition: all 0.5s ease;
+      }
+
+      .degradados:hover {
+        border-radius: 10px;
+        width: 100px;
+        background: green;
+      }
+
+      .flex {
+        justify-content: space-between;
+      }
+
+      input {
+        transition: all 0.5s ease;
+        border: 1px solid white;
+      }
+
+      input:focus {
+        outline: none;
+        box-shadow: 0 0 10px blue;
+        border-color: blue;
       }
     </style>
   </head>
   <body>
-    <div class="flex">
+    <!-- <div class="flex">
       <div class="radius"></div>
       <div class="radius"></div>
     </div>
@@ -61,5 +100,123 @@
     <h1>TEXTO</h1>
 
     <div class="fondo"></div>
+
+    <div class="degradados"></div> -->
+
+    <div class="flex">
+      <input type="text" />
+      <input type="text" />
+    </div>
+
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore fugiat,
+      nulla laborum soluta adipisci, labore optio assumenda possimus saepe
+      sapiente, quam dolores vitae. Inventore, nam soluta beatae accusantium
+      distinctio nobis!
+    </p>
+
+    <style>
+      p {
+        animation-duration: 1s;
+        animation-name: slidein;
+        animation-iteration-count: infinite;
+      }
+
+      @keyframes slidein {
+        from {
+          margin-left: 100%;
+          width: 300%;
+          background: red;
+          font-size: 13px;
+        }
+
+        to {
+          margin-left: 0%;
+          width: 100%;
+          background: blue;
+          font-size: 20px;
+        }
+      }
+
+
+      &.translate {
+    &:hover {
+      transform: translate(100px, 100px); 
+    }    
+  }
+  
+  &.translate-x {
+    &:hover {
+      transform: translateX(100px);
+    }
+  }
+  
+  &.translate-y {
+    &:hover {
+      transform: translateY(100px);
+    }
+  }
+  
+  &.scale {
+    &:hover {
+      transform: scale(2, 2);
+    }
+  }
+  
+  &.scale-x {
+    &:hover {
+      transform: scaleX(2);
+    }
+  }
+  
+  &.scale-y {
+    &:hover {
+      transform: scaleY(2);
+    }
+  }
+  
+  &.rotate {
+    &:hover {
+      /*transform: rotate(1turn);*/
+      transform: rotate(360deg);
+    }
+  }
+  
+  &.rotate-x {
+    &:hover {
+      transform: rotateX(1turn);
+    }
+  }
+  
+  &.rotate-y {
+    &:hover {
+      transform: rotateY(1turn);
+    }
+  }
+  
+  &.rotate-z {
+    &:hover {
+      transform: rotateZ(1turn);
+    }
+  }
+  
+  &.skew {
+    &:hover {
+      transform: skew(10deg, 10deg);
+    }
+  }
+  
+  &.skew-x {
+    &:hover {
+      transform: skewX(10deg);
+    }
+  }
+  
+  &.skew-y {
+    &:hover {
+      transform: skewY(10deg);
+    }
+  }
+    </style>
   </body>
 </html>
