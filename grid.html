@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>GRILLA</title>
+    <style>
+      .grid {
+        display: grid;
+        /* grid-template-columns: 25% 25% 25% 25%;
+        grid-template-rows: auto; */
+        grid-template: auto / 100px 100px 100px 100px;
+      }
+
+      .grid div {
+        background-color: red;
+      }
+
+      .grid div:nth-child(even) {
+        background: orange;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- <div class="grid">
+      <div>1</div>
+      <div>2</div>
+      <div>3</div>
+      <div>4</div>
+      <div>5</div>
+      <div>6</div>
+      <div>7</div>
+      <div>8</div>
+      <div>9</div>
+      <div>10</div>
+    </div> -->
+
+    <style>
+      body {
+        margin: 0;
+      }
+
+      .areas {
+        height: 100vh;
+        color: pink;
+        font-weight: bold;
+        /* margin-top: 20px; */
+        display: grid;
+        /* grid-template-columns: 25% 25% 25% 25%; */
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        /* grid-template-rows: 33.33% 33.33% 33.33%; */
+        grid-template-rows: 1fr 1fr 1fr;
+        grid-template-areas:
+          "header section  nav footer"
+          "header section nav footer"
+          "header section nav footer";
+        /* grid-row-gap: 10px;
+        grid-column-gap: 10px; */
+        grid-gap: 10px;
+        /* grid-template:
+          "footer footer footer footer" 120px
+          "aside  section section nav" 120px
+          "header header  header header" 120px / 50px 50px 50px 50px; */
+      }
+
+      header {
+        grid-area: header;
+        background: red;
+      }
+
+      nav {
+        grid-area: nav;
+        background: yellow;
+      }
+
+      aside {
+        grid-area: aside;
+        background: blue;
+      }
+
+      section {
+        grid-area: section;
+        background: brown;
+      }
+
+      footer {
+        grid-area: footer;
+        background: green;
+      }
+
+      .container {
+        max-width: 960px;
+        width: 100%;
+        margin: auto;
+      }
+
+      @media (max-width: 600px) {
+        .areas {
+          grid-gap: 50px;
+        }
+      }
+    </style>
+    <div class="container">
+      <div class="areas">
+        <aside>aside</aside>
+        <header>header</header>
+        <footer>footer</footer>
+        <section>section</section>
+        <nav>nav</nav>
+      </div>
+    </div>
+  </body>
+</html>
