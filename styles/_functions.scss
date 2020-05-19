@@ -1,0 +1,3 @@
+@function percentage($base, $percent) {
+  @return $base * $percent / 100;
+}

@@ -1,0 +1,33 @@
+// url
+$base-url: "https://estaticos.muyinteresante.es/media/cache/1140x_thumb/uploads/images/gallery/5b755a235cafe886f57f0c61/";
+
+// FONTS
+$font-family: arial;
+$font-size: 14px;
+$font-size-base: 62.5%;
+
+$fonts: (
+  default: arial,
+  title: verdana,
+);
+
+@each $key, $value in $fonts {
+  .font-#{$key} {
+    color: $value;
+  }
+}
+
+// COLORES
+$color-primary: #5500c1;
+$color-secondary: #009b9b;
+
+$colors-branding: (
+  primary: #5500c1,
+  secondary: #009b9b,
+);
+
+@each $key, $value in $colors-branding {
+  .color-#{$key} {
+    color: $value;
+  }
+}
